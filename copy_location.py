@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""
+'''
 Copy Location
 
 URL:
@@ -23,29 +23,29 @@ To Install:
 
     For a specific user, copy this file to:
     /opt/Autodesk/user/<user name>/python
-"""
+'''
 
 from __future__ import print_function
 import socket
 import flame
 from PySide2 import QtWidgets
 
-TITLE = "Copy Location"
-VERSION_INFO = (1, 0, 0)
-VERSION = ".".join([str(num) for num in VERSION_INFO])
-TITLE_VERSION = "{} v{}".format(TITLE, VERSION)
-MESSAGE_PREFIX = "[PYTHON HOOK]"
+TITLE = 'Copy Location'
+VERSION_INFO = (1, 0, 1)
+VERSION = '.'.join([str(num) for num in VERSION_INFO])
+TITLE_VERSION = '{} v{}'.format(TITLE, VERSION)
+MESSAGE_PREFIX = '[PYTHON HOOK]'
 SEPARATOR = ' > '
 
 
 def message(string):
-    """Print message to shell window and append global MESSAGE_PREFIX."""
+    '''Print message to shell window and append global MESSAGE_PREFIX.'''
 
     print(" ".join([MESSAGE_PREFIX, string]))
 
 
 def copy_to_clipboard(text):
-    """Self explanitory.  Only takes a string."""
+    '''Self explanitory.  Only takes a string.'''
 
     qt_app_instance = QtWidgets.QApplication.instance()
     qt_app_instance.clipboard().setText(text)
@@ -81,7 +81,7 @@ def find_parents(starting_item):
 def copy_locations(selection):
 
     message(TITLE_VERSION)
-    message("Script called from {}".format(__file__))
+    message('Script called from {}'.format(__file__))
 
     paths = ''
 
@@ -93,7 +93,7 @@ def copy_locations(selection):
 
     copy_to_clipboard(paths)
 
-    message("Copied to clipboard!")
+    message('Copied to clipboard!')
     message('Done!')
 
 
@@ -107,9 +107,9 @@ def scope_clip(selection):
 
 def get_media_panel_custom_ui_actions():
 
-    return [{'name': "Copy...",
-             'actions': [{'name': "Location to Clipboard",
+    return [{'name': 'Copy...',
+             'actions': [{'name': 'Location to Clipboard',
                           'isVisible': scope_clip,
                           'execute': copy_locations,
-                          'minimumVersion': "2021.1"}]
+                          'minimumVersion': '2021.1'}]
             }]
