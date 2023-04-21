@@ -2,7 +2,7 @@
 
 Plugin for [Autodesk Flame software](http://www.autodesk.com/products/flame).
 
-Copy location of selected items inside of Flame.  
+Copy location of selected items inside of Flame.
 
 Example: `hostname > project_name > WORKSPACE > Desktop > Reels > Reel 1 > BLACK`
 
@@ -18,4 +18,4 @@ For specific users, copy to `/opt/Autodesk/user/<user name>/python`
 - Right-click selected items in the Media Panel `->` Copy... `->` Location to Clipboard
 
 ## Acknowledgements
-UI Templates courtesy of [pyflame.com](http://www.pyflame.com)
+Many thanks to [pyflame.com](http://www.pyflame.com)
