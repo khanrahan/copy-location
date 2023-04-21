@@ -4,8 +4,7 @@ Plugin for [Autodesk Flame software](http://www.autodesk.com/products/flame).
 
 Copy location of selected items inside of Flame.  
 
-Example below:
-`hostname > project_name > WORKSPACE > Desktop > Reels > Reel 1 > BLACK`
+Example: `hostname > project_name > WORKSPACE > Desktop > Reels > Reel 1 > BLACK`
 
 ## Installation
 **Tested & working on 2021.1 & 2024 PR180**
