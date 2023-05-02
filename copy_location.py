@@ -13,8 +13,8 @@ Description:
 
 Menus:
 
-    Right-click selected items on the Desktop --> Copy... --> Copy Location
-    Right-click selected items in the Media Panel --> Copy... --> Copy Location
+    Right-click selected items on the Desktop --> Copy... --> Location to Clipboard
+    Right-click selected items in the Media Panel --> Copy... --> Location to Clipboard
 
 To Install:
 
@@ -31,7 +31,7 @@ import flame
 from PySide2 import QtWidgets
 
 TITLE = 'Copy Location'
-VERSION_INFO = (1, 0, 1)
+VERSION_INFO = (1, 1, 1)
 VERSION = '.'.join([str(num) for num in VERSION_INFO])
 TITLE_VERSION = '{} v{}'.format(TITLE, VERSION)
 MESSAGE_PREFIX = '[PYTHON HOOK]'
@@ -97,10 +97,10 @@ def copy_locations(selection):
     message('Done!')
 
 
-def scope_clip(selection):
+def scope_item(selection):
 
     for item in selection:
-        if isinstance(item, flame.PyClip):
+        if isinstance(item, (flame.PyBatch, flame.PyClip)):
             return True
     return False
 
@@ -109,7 +109,7 @@ def get_media_panel_custom_ui_actions():
 
     return [{'name': 'Copy...',
              'actions': [{'name': 'Location to Clipboard',
-                          'isVisible': scope_clip,
+                          'isVisible': scope_item,
                           'execute': copy_locations,
                           'minimumVersion': '2021.1'}]
             }]
