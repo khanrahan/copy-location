@@ -31,7 +31,7 @@ import flame
 from PySide2 import QtWidgets
 
 TITLE = 'Copy Location'
-VERSION_INFO = (1, 1, 1)
+VERSION_INFO = (1, 1, 2)
 VERSION = '.'.join([str(num) for num in VERSION_INFO])
 TITLE_VERSION = '{} v{}'.format(TITLE, VERSION)
 MESSAGE_PREFIX = '[PYTHON HOOK]'
@@ -83,15 +83,14 @@ def copy_locations(selection):
     message(TITLE_VERSION)
     message('Script called from {}'.format(__file__))
 
-    paths = ''
+    paths = []
 
     for item in selection:
         location_path = SEPARATOR.join(find_parents(item))
         message(location_path)
-        paths += location_path
-        paths += '\n'
+        paths.append(location_path)
 
-    copy_to_clipboard(paths)
+    copy_to_clipboard('\n'.join(paths))
 
     message('Copied to clipboard!')
     message('Done!')
