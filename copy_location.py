@@ -11,6 +11,18 @@ Description:
 
     Copy location of item inside of Flame (as opposed to the path in the file system).
 
+Available for the following items:
+
+    Batch Groups
+    Batch Iterations
+    Clips
+    Desktops
+    Folders
+    Libraries
+    Reels
+    Reel Groups
+    Sequences
+
 Menus:
 
     Right-click selected items on the Desktop --> Copy... --> Location to Clipboard

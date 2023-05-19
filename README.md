@@ -4,7 +4,20 @@ Plugin for [Autodesk Flame software](http://www.autodesk.com/products/flame).
 
 Copy location of selected items inside of Flame.
 
-Example: `hostname > project_name > WORKSPACE > Desktop > Reels > Reel 1 > BLACK`
+Available for the following items:
+ - Batch Groups
+ - Batch Iterations
+ - Clips
+ - Desktops
+ - Folders
+ - Libraries
+ - Reels
+ - Reel Groups
+ - Sequences
+
+## Example
+For a single frame of Black on the Desktop, the below would be sent to the clipboard:
+`hostname > project_name > WORKSPACE > Desktop > Reels > Reel 1 > BLACK`
 
 ## Installation
 **Tested & working on 2021.1 & 2024 PR180**
