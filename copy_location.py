@@ -31,7 +31,7 @@ import flame
 from PySide2 import QtWidgets
 
 TITLE = 'Copy Location'
-VERSION_INFO = (1, 1, 2)
+VERSION_INFO = (1, 2, 0)
 VERSION = '.'.join([str(num) for num in VERSION_INFO])
 TITLE_VERSION = '{} v{}'.format(TITLE, VERSION)
 MESSAGE_PREFIX = '[PYTHON HOOK]'
@@ -99,7 +99,14 @@ def copy_locations(selection):
 def scope_item(selection):
 
     for item in selection:
-        if isinstance(item, (flame.PyBatch, flame.PyClip)):
+        if isinstance(item, (flame.PyBatch,
+                             flame.PyBatchIteration,
+                             flame.PyClip,
+                             flame.PyDesktop,
+                             flame.PyFolder,
+                             flame.PyLibrary,
+                             flame.PyReel,
+                             flame.PyReelGroup)):
             return True
     return False
 
