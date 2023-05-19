@@ -17,6 +17,7 @@ Available for the following items:
 
 ## Example
 For a single frame of Black on the Desktop, the below would be sent to the clipboard:
+
 `hostname > project_name > WORKSPACE > Desktop > Reels > Reel 1 > BLACK`
 
 ## Installation
