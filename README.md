@@ -14,15 +14,20 @@ Available for the following items:
  - Reels
  - Reel Groups
  - Sequences
+ - Workspaces
 
 ## Example
 For a single frame of Black on the Desktop, the below would be sent to the clipboard:
 
 `hostname > project_name > WORKSPACE > Desktop > Reels > Reel 1 > BLACK`
 
-## Installation
-**Tested & working on 2021.1 & 2024 PR180**
+## Compatibility
+|Release Version|Flame Version|
+|---|---|
+|v2.X.X|Flame 2022 up to 2024.2|
+|v1.X.X|Flame 2021 up to 2021.2|
 
+## Installation
 To make available to all users on the workstation, copy `copy_location.py` to `/opt/Autodesk/shared/python`
 
 For specific users, copy to `/opt/Autodesk/user/<user name>/python`

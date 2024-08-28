@@ -2,7 +2,7 @@
 Script Name: Copy Location
 Written By: Kieran Hanrahan
 
-Script Version: 1.2.0
+Script Version: 2.0.0
 Flame Version: 2022
 
 URL: http://github.com/khanrahan/copy-location
@@ -46,7 +46,7 @@ import flame
 from PySide2 import QtWidgets
 
 TITLE = 'Copy Location'
-VERSION_INFO = (1, 2, 0, 'dev')
+VERSION_INFO = (2, 0, 0)
 VERSION = '.'.join([str(num) for num in VERSION_INFO])
 TITLE_VERSION = f'{TITLE} v{VERSION}'
 MESSAGE_PREFIX = '[PYTHON]'
