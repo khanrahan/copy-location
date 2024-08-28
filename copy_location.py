@@ -1,4 +1,4 @@
-'''
+"""
 Copy Location
 
 URL:
@@ -33,7 +33,7 @@ To Install:
 
     For a specific user, copy this file to:
     /opt/Autodesk/user/<user name>/python
-'''
+"""
 
 import socket
 import flame
@@ -48,20 +48,20 @@ SEPARATOR = ' > '
 
 
 def message(string):
-    '''Print message to shell window and append global MESSAGE_PREFIX.'''
+    """Print message to shell window and append global MESSAGE_PREFIX."""
 
-    print(" ".join([MESSAGE_PREFIX, string]))
+    print(' '.join([MESSAGE_PREFIX, string]))
 
 
 def copy_to_clipboard(text):
-    '''Self explanitory.  Only takes a string.'''
+    """Self explanitory.  Only takes a string."""
 
     qt_app_instance = QtWidgets.QApplication.instance()
     qt_app_instance.clipboard().setText(text)
 
 
 def get_hostname():
-    '''Return hostname without the domain.'''
+    """Return hostname without the domain."""
 
     hostname = socket.gethostname().split('.')[0]
 
@@ -69,7 +69,7 @@ def get_hostname():
 
 
 def find_parents(starting_item):
-    '''Returns a list of parent object names ascending from right to left.'''
+    """Returns a list of parent object names ascending from right to left."""
 
     current_item = starting_item
     parents = [current_item.name.get_value()]
