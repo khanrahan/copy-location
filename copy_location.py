@@ -49,20 +49,17 @@ SEPARATOR = ' > '
 
 def message(string):
     """Print message to shell window and append global MESSAGE_PREFIX."""
-
     print(' '.join([MESSAGE_PREFIX, string]))
 
 
 def copy_to_clipboard(text):
     """Self explanitory.  Only takes a string."""
-
     qt_app_instance = QtWidgets.QApplication.instance()
     qt_app_instance.clipboard().setText(text)
 
 
 def get_hostname():
     """Return hostname without the domain."""
-
     hostname = socket.gethostname().split('.')[0]
 
     return hostname
@@ -70,7 +67,6 @@ def get_hostname():
 
 def find_parents(starting_item):
     """Returns a list of parent object names ascending from right to left."""
-
     current_item = starting_item
     parents = [current_item.name.get_value()]
 
