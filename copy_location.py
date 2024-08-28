@@ -1,9 +1,14 @@
 """
-Copy Location
+Script Name: Copy Location
+Written By: Kieran Hanrahan
 
-URL:
+Script Version: 1.2.0
+Flame Version: 2022
 
-    http://github.com/khanrahan/copy-location
+URL: http://github.com/khanrahan/copy-location
+
+Creation Date: 04.21.23
+Update Date: 08.28.24
 
 Description:
 
