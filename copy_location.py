@@ -85,7 +85,7 @@ def find_parents(starting_item):
 
 
 def copy_locations(selection):
-
+    """The main function of this script."""
     message(TITLE_VERSION)
     message(f'Script called from {__file__}')
 
@@ -103,7 +103,7 @@ def copy_locations(selection):
 
 
 def scope_item(selection):
-
+    """Test for matches."""
     for item in selection:
         if isinstance(item, (flame.PyBatch,
                              flame.PyBatchIteration,
@@ -118,7 +118,7 @@ def scope_item(selection):
 
 
 def get_media_panel_custom_ui_actions():
-
+    """Add right click menu item."""
     return [{'name': 'Copy...',
              'actions': [{'name': 'Location to Clipboard',
                           'isVisible': scope_item,
