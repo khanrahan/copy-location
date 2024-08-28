@@ -35,13 +35,12 @@ To Install:
     /opt/Autodesk/user/<user name>/python
 '''
 
-from __future__ import print_function
 import socket
 import flame
 from PySide2 import QtWidgets
 
 TITLE = 'Copy Location'
-VERSION_INFO = (1, 2, 0)
+VERSION_INFO = (1, 2, 0, 'dev')
 VERSION = '.'.join([str(num) for num in VERSION_INFO])
 TITLE_VERSION = '{} v{}'.format(TITLE, VERSION)
 MESSAGE_PREFIX = '[PYTHON HOOK]'
@@ -127,5 +126,5 @@ def get_media_panel_custom_ui_actions():
              'actions': [{'name': 'Location to Clipboard',
                           'isVisible': scope_item,
                           'execute': copy_locations,
-                          'minimumVersion': '2021.1'}]
+                          'minimumVersion': '2022'}]
             }]
