@@ -104,17 +104,17 @@ def copy_locations(selection):
 
 def scope_item(selection):
     """Test for matches."""
-    for item in selection:
-        if isinstance(item, (flame.PyBatch,
-                             flame.PyBatchIteration,
-                             flame.PyClip,
-                             flame.PyDesktop,
-                             flame.PyFolder,
-                             flame.PyLibrary,
-                             flame.PyReel,
-                             flame.PyReelGroup)):
-            return True
-    return False
+    valid_objects = (
+            flame.PyBatch,
+            flame.PyBatchIteration,
+            flame.PyClip,
+            flame.PyDesktop,
+            flame.PyFolder,
+            flame.PyReel,
+            flame.PyReelGroup,
+            flame.PyWorkspace)
+
+    return all(isinstance(item, valid_objects) for item in selection)
 
 
 def get_media_panel_custom_ui_actions():
