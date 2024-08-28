@@ -36,13 +36,14 @@ To Install:
 """
 
 import socket
+
 import flame
 from PySide2 import QtWidgets
 
 TITLE = 'Copy Location'
 VERSION_INFO = (1, 2, 0, 'dev')
 VERSION = '.'.join([str(num) for num in VERSION_INFO])
-TITLE_VERSION = '{} v{}'.format(TITLE, VERSION)
+TITLE_VERSION = f'{TITLE} v{VERSION}'
 MESSAGE_PREFIX = '[PYTHON HOOK]'
 SEPARATOR = ' > '
 
@@ -86,7 +87,7 @@ def find_parents(starting_item):
 def copy_locations(selection):
 
     message(TITLE_VERSION)
-    message('Script called from {}'.format(__file__))
+    message(f'Script called from {__file__}')
 
     paths = []
 
