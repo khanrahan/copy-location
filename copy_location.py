@@ -2,13 +2,13 @@
 Script Name: Copy Location
 Written By: Kieran Hanrahan
 
-Script Version: 2.0.0
-Flame Version: 2022
+Script Version: 3.0.0
+Flame Version: 2025
 
 URL: http://github.com/khanrahan/copy-location
 
 Creation Date: 04.21.23
-Update Date: 08.28.24
+Update Date: 03.06.25
 
 Description:
 
@@ -34,19 +34,22 @@ Menus:
 To Install:
 
     For all users, copy this file to:
-    /opt/Autodesk/shared/python
+    /opt/Autodesk/shared/python/
 
-    For a specific user, copy this file to:
-    /opt/Autodesk/user/<user name>/python
+    For a specific user on Linux, copy this file to:
+    /home/<user_name>/flame/python/
+
+    For a specific user on Mac, copy this file to:
+    /Users/<user_name>/Library/Preferences/Autodesk/flame/python/
 """
 
 import socket
 
 import flame
-from PySide2 import QtWidgets
+from PySide6 import QtWidgets
 
 TITLE = 'Copy Location'
-VERSION_INFO = (2, 0, 0)
+VERSION_INFO = (3, 0, 0)
 VERSION = '.'.join([str(num) for num in VERSION_INFO])
 TITLE_VERSION = f'{TITLE} v{VERSION}'
 MESSAGE_PREFIX = '[PYTHON]'
@@ -128,5 +131,5 @@ def get_media_panel_custom_ui_actions():
              'actions': [{'name': 'Location to Clipboard',
                           'isVisible': scope_item,
                           'execute': copy_locations,
-                          'minimumVersion': '2022'}]
+                          'minimumVersion': '2025'}]
             }]
