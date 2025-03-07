@@ -8,7 +8,7 @@ Flame Version: 2025
 URL: http://github.com/khanrahan/copy-location
 
 Creation Date: 04.21.23
-Update Date: 08.28.24
+Update Date: 03.06.25
 
 Description:
 
