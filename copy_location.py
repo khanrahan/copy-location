@@ -3,7 +3,7 @@ Script Name: Copy Location
 Written By: Kieran Hanrahan
 
 Script Version: 2.0.0
-Flame Version: 2022
+Flame Version: 2025
 
 URL: http://github.com/khanrahan/copy-location
 
@@ -43,7 +43,7 @@ To Install:
 import socket
 
 import flame
-from PySide2 import QtWidgets
+from PySide6 import QtWidgets
 
 TITLE = 'Copy Location'
 VERSION_INFO = (2, 0, 0)
@@ -128,5 +128,5 @@ def get_media_panel_custom_ui_actions():
              'actions': [{'name': 'Location to Clipboard',
                           'isVisible': scope_item,
                           'execute': copy_locations,
-                          'minimumVersion': '2022'}]
+                          'minimumVersion': '2025'}]
             }]
