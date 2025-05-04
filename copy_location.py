@@ -118,6 +118,7 @@ def scope_item(selection):
             flame.PyClip,
             flame.PyDesktop,
             flame.PyFolder,
+            flame.PyLibrary,
             flame.PyReel,
             flame.PyReelGroup,
             flame.PyWorkspace)
