@@ -2,13 +2,13 @@
 Script Name: Copy Location
 Written By: Kieran Hanrahan
 
-Script Version: 3.0.0
+Script Version: 3.0.1
 Flame Version: 2025
 
 URL: http://github.com/khanrahan/copy-location
 
 Creation Date: 04.21.23
-Update Date: 03.06.25
+Update Date: 05.09.25
 
 Description:
 
@@ -49,7 +49,7 @@ import flame
 from PySide6 import QtWidgets
 
 TITLE = 'Copy Location'
-VERSION_INFO = (3, 0, 0)
+VERSION_INFO = (3, 0, 1)
 VERSION = '.'.join([str(num) for num in VERSION_INFO])
 TITLE_VERSION = f'{TITLE} v{VERSION}'
 MESSAGE_PREFIX = '[PYTHON]'
@@ -118,6 +118,7 @@ def scope_item(selection):
             flame.PyClip,
             flame.PyDesktop,
             flame.PyFolder,
+            flame.PyLibrary,
             flame.PyReel,
             flame.PyReelGroup,
             flame.PyWorkspace)
